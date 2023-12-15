@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+.App{
+  width: 1367px;
+  height: 768px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headerContainer{
+  display: flex;
+  width: 1367px;
+  padding: 16px 144px;
+  justify-content: space-between;
+  align-items: center;
+  background: #101010;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .headerfull{
+  padding: 16px 144px;
+} */
+.logoName{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo{
+  width: 22px;
+  height: 22px;
+  
+}
+.anchorName{
+  color: #FFF;
+font-family: Sora;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left: 14px;
+margin-right: 10px;
+margin-top: 6.5px;
+margin-bottom: 6.5px;
+}
+.beta{
+  display: inline-flex;
+padding: 2px 6px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 4px;
+background: #CCC;
+width: auto 34px;
+height: auto 16px;
+}
+.betaText{
+  color: #232426;
+font-family: Inter;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.containerBox1{
+  display: flex;
+width: 713px;
+flex-direction: column;
+align-items: center;
+margin: 0px;
+}
+.headingLine{
+  width: auto 741px;
+  height: auto 144px;
+  color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: 72px; /* 144% */
+margin-bottom: 24px;
+}
+.page1{
+  background: #101010; 
+  margin-left: 313px;
+  margin-right: 313px;
+  margin-top: 134px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 24px;
 }
-
-.App-link {
-  color: #61dafb;
+.subHeading{
+  margin-top: 0px;
+  margin-bottom: 60px;
+  color: rgba(255, 255, 255, 0.80);
+text-align: center;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 36px; /* 150% */
 }
+.searchBox{
+  display: flex;
+padding: 12px 39px;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+border-radius: 10000px;
+border: 1px solid rgba(255, 255, 255, 0.50);
+}
+.inputLink{
+  flex: 1 0 0;
+  color: #373737;
+  background: #101010;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border: none;
+width: auto 158px;
+height: auto 48px;
+}
+.linkButton{
+  display: flex;
+height: 48px;
+padding: 18px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 35px;
+background: #FF2020;
+}
+.youtubueImg{
+  width: 24px;
+height: 24px;
+}
+.playbg{
+  display: flex;
+width: 300px;
+height: 300px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 100000px;
+background: rgba(255, 255, 255, 0.06);
+margin-left: 963px;
+}
+.playbgImg{
+  width: 80px;
+height: 80px;
+flex-shrink: 0;
+}
+form{
+  display: flex;
+  flex-direction: row;
+}
+.thumbnailFull{
+  display: flex;
+width: 254px;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+}
+.thumbnailTop{
+  display: flex;
+padding: 4px 8px;
+align-items: center;
+gap: 4px;
+border-radius: 4px;
+background: #707070;
+}
+.thumbnailTopImg{
+  width: 24px;
+height: 24px;
+}
+.thumbnailTopText{
+  color: #FFF;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+}
+.thumbnailImg{
+  width: 240px;
+height: 135px;
+border-radius: 10px;
+background:  lightgray 50% / cover no-repeat, #FFF;
+}
+.thumbnailBottom{
+  color: rgba(255, 255, 255, 0.50);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.container2{
+  display: flex;
+  flex-direction: row;
+  
+}
+.nameCount{
+  display: flex;
+width: 255px;
+flex-direction: column;
+justify-content: center;
+/* align-items: flex-start; */
+gap: 11px;
+margin-left: 34px;
+}
+.videoTitle{
+  width: 100% 255px;
+  height: 50px;
+align-self: stretch;
+overflow: hidden;
+color: #FFF;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.countBox{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+align-self: stretch;
+justify-content: center;
+align-items: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.likeCommentIcon{
+  width: 24px;
+height: 24px;
+margin: 4px;
+}
+.count{
+  color: rgba(255, 255, 255, 0.50);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 4px;
 }
