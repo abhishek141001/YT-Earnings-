@@ -11,13 +11,10 @@ function PopUpForm({open,onClose}) {
 const handleSubmit = (e)=>{
     e.preventDefault();
    
-    const serviceId = "service_pvoqv4j"
-    const templetId = "template_0ugi4td"
-    const userId = "B8qwxXBt4WOb3FnrY"
-    const templetParams = {
-        name:name,
-        contact: number
-    } 
+    const serviceId = process.env.REACT_APP_Service_id;
+    const templetId =  process.env.REACT_APP_Templet_id
+    const userId = process.env.REACT_APP_User_id;
+    
 
     emailjs.sendForm(serviceId, templetId, form.current, userId)
     .then(() => {
@@ -25,7 +22,7 @@ const handleSubmit = (e)=>{
         setNumber("")
         setSubmit(true)
         form.current.reset();
-       return<div>our tem will contact you soon</div> //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+
     }, (error) => {
         console.log(error.text);
     });
@@ -47,8 +44,8 @@ const handleSubmit = (e)=>{
         12-24 hrs</p>
         
         </div>:<form className='mainForm' ref={form} onSubmit={handleSubmit}>
-    <input className='contactInput' placeholder='Name' name='name' value={name} type='text' onChange={(e)=>{setName(e.target.value)}} />
-   <input className='contactInput' placeholder='Email or Phone number' value={number} name='contact' type='text' onChange={(e)=>{setNumber(e.target.value)}}/>
+    <input className='contactInput' placeholder='Name' name='user_name' value={name} type='text' onChange={(e)=>{setName(e.target.value)}} />
+   <input className='contactInput' placeholder='Email or Phone number' value={number} name='user_contact' type='text' onChange={(e)=>{setNumber(e.target.value)}}/>
    <button className='contactSubmit'>Request a call back</button>
    </form>} 
     

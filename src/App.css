@@ -109,7 +109,7 @@ margin-bottom: 24px;
 }
 .page1{
   background: #101010; 
-  margin-left: 313px;
+  margin-left: 225px;
   margin-right: 313px;
   margin-top: 134px;
   display: flex;
@@ -444,4 +444,76 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 125% */
+}
+.back{
+  /* color: white; */
+  width: 20px;
+  margin-bottom: 26px;
+  position: absolute;
+  top: 108px;
+  margin: 4px;
+    /* margin-bottom: 4px; */
+  padding: 2px;
+  /* margin-bottom: 15px; */
+}
+.videoList{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  max-width: 1150px;
+}
+.listLike{
+  margin: 20px 40px;
+  margin-left: 60px;
+  max-width: 240px;
+  width: 240px;
+  max-height: 70px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.80);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.labelBox{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background: #1E1E1E;
+  padding: 20px;
+  max-width: 1150px;
+
+}
+.listLable{
+  margin: 0px 40px;
+  width: 240px;
+}
+.leftMargin{
+  margin-left: 70px;
+}
+.otherVideo{
+  color: rgba(255, 255, 255, 0.70);
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 140% */
+margin-left: 35%;
+}
+.otherVideobox{
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  /* align-items: center; */
+  
+}
+.videoBox{
+  display: flex;
+  flex-direction: column-reverse;
+  background: rgba(30, 30, 30, 0.50);
+  margin-top: 5px;
+  max-width: 1190px;
 }

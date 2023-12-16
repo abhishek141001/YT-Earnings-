@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
+import AllVideos from "../components/allVideos";
 
-function Page2() {
-
+export default function Page2() {
+    const navigate = useNavigate();
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     const [videoId, setVideoId] = useState("")
     const [videoData, setVideoData] = useState(null);
-    const [videTitle, setVideoTitle] = useState("")
+    const [videoTitle, setVideoTitle] = useState("")
     const [videoLike, setVideoLike] = useState("")
     const [videoCommentCount, setVideoCommentCount] = useState("")
     const [thumbnail, setThumbnail] = useState("")
@@ -17,9 +18,34 @@ function Page2() {
     const [subscriber, setSubscriber] = useState()
     const [progress, setProgress] = useState(10)
     const[totalEarning,setTotalEarning] = useState("")
+    const [allVideoArray, setAllVideoArray] = useState(() => {
+        // Load data from localStorage if available
+        const storedVideos = localStorage.getItem('videos');
+        return storedVideos ? JSON.parse(storedVideos) : [];
+    });
+    // const allVideosArray = []
+    const handleBack = ()=>{
+        if (videoTitle && videoLike && videoCommentCount && viewCount && totalEarning && thumbnail) {
+            const newVideo = {
+                videoTitle,
+                videoLike,
+                videoCommentCount,
+                viewCount,
+                totalEarning,
+                thumbnail
+            };
+            setAllVideoArray(prevArray => {
+                const updatedArray = [...prevArray, newVideo];
+                // Save updated data to localStorage
+                localStorage.setItem('videos', JSON.stringify(updatedArray));
+                return updatedArray;
+            });
+           
+    }
+    navigate("/")
+}
 
-
-    const apiKey = "AIzaSyCfnpoNb0F2qMuWX0YXgEVi85s5HBJNKkg"
+   
 
     useEffect(() => {
 
@@ -31,7 +57,7 @@ function Page2() {
 
 
     useEffect(() => {
-
+        const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
         const getData = async () => {
 
             try {
@@ -71,6 +97,7 @@ function Page2() {
 
 
     useEffect(() => {
+        const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
         const getChannelData = async () => {
             
 
@@ -128,8 +155,12 @@ function Page2() {
             />
           
          {progress===0?  <div className="page2">
+         
                 <div className="container2">
+                
                     <div className="thumbnailFull">
+                   
+                    <img className="back" src="/img/arrow.png" onClick={handleBack}/>
                         <div className="thumbnailTop">
                             <img className="thumbnailTopImg" src="/img/thumbnailtop.png" alt="img" />
                             <p className="thumbnailTopText">Top earner video</p>
@@ -138,7 +169,7 @@ function Page2() {
                         <p className="thumbnailBottom">Uploaded on  - June 23, 2023</p>
                     </div>
                     <div className="nameCount">
-                        <h4 className="videoTitle">{videTitle}</h4>
+                        <h4 className="videoTitle">{videoTitle}</h4>
                         <div className="countBox">
                             <img className="likeCommentIcon" src="/img/eye.png" />
                             <p className="count">{viewCount}</p>
@@ -162,7 +193,11 @@ function Page2() {
                     </div>
                 </div>
             </div>:<div className="page2 loading" ></div>}
+            {progress===0? <AllVideos 
+                allVideosArray={allVideoArray} 
+                 />:<div></div>}
+           
         </>
     )
 }
-export default Page2;
+    
