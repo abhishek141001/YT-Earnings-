@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import PopUpForm from "./popUpForm";
 
 
 function Header(){
+       
+   const [isOpen,setIsOpen] = useState(false) 
+
+
     return(
         
             <div className="headerContainer">
@@ -10,7 +15,8 @@ function Header(){
                 <h2 className="anchorName">anchors</h2><span className="beta"><p className="betaText">beta</p></span>
             </div>
             <div className="popUpButton">
-                <button className="popup"></button>
+                <button className="popup" onClick={()=>{setIsOpen(true)}}><img className="phoneImg" src="/img/phone.png" /><p className="requestCall">Request a call back</p></button>
+                <PopUpForm open ={isOpen} onClose={()=>{setIsOpen(false)}}/>
                 {/* <img className="popupImg" src/> */}
             </div>
             </div>

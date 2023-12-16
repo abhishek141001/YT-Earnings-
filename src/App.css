@@ -1,11 +1,12 @@
 .App{
   width: 1367px;
   height: 768px;
+  margin: 14px 144px;
 }
 .headerContainer{
   display: flex;
   width: 1367px;
-  padding: 16px 144px;
+  /* padding: 16px 144px; */
   justify-content: space-between;
   align-items: center;
   background: #101010;
@@ -20,6 +21,7 @@
   align-items: center;
 }
 .logo{
+  /* margin-left: 144px; */
   width: 22px;
   height: 22px;
   
@@ -36,11 +38,15 @@ margin-right: 10px;
 margin-top: 6.5px;
 margin-bottom: 6.5px;
 }
+.mainName{
+  /* margin-bottom: 19px; */
+}
 .beta{
   display: inline-flex;
 padding: 2px 6px;
 align-items: flex-start;
 gap: 10px;
+margin-bottom: 10px;
 border-radius: 4px;
 background: #CCC;
 width: auto 34px;
@@ -53,6 +59,34 @@ font-size: 10px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.popUpButton{
+ 
+  margin-right: 300px;
+  margin-bottom: 10px;
+}
+.popup{
+  display: flex;
+  flex-direction: row;
+  padding: 0px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  background: #101010;
+}
+.requestCall{
+  color: #FFF;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 120% */
+padding: 0px;
+margin: 0px;
 }
 .containerBox1{
   display: flex;
@@ -146,20 +180,26 @@ margin-left: 963px;
 height: 80px;
 flex-shrink: 0;
 }
+.playBox{
+  display: flex;
+  justify-content: end;
+  /* margin-left: 100px; */
+}
 form{
   display: flex;
   flex-direction: row;
 }
 .thumbnailFull{
   display: flex;
-width: 254px;
+  width: fixed 240px;
+  height: fixed 135px; 
 flex-direction: column;
 align-items: flex-start;
 gap: 20px;
 }
 .thumbnailTop{
   display: flex;
-padding: 4px 8px;
+padding: 0px 4px;
 align-items: center;
 gap: 4px;
 border-radius: 4px;
@@ -194,15 +234,32 @@ line-height: normal;
 .container2{
   display: flex;
   flex-direction: row;
+  /* justify-content: center; */
+  background: #1E1E1E; 
+  width: 82%;
+  align-items: center;
+  padding: 36px;
+  border-radius: 20px;
+  /* margin: 40px; */
   
+}
+.page2{
+  display: flex;
+
+  /* justify-content: center; */
+  width: fixed 1079px;
+  height: auto 266px;
+  /* margin-left: 286px; */
+  margin-top: 46px;
+
 }
 .nameCount{
   display: flex;
-width: 255px;
+width: 300px;
 flex-direction: column;
 justify-content: center;
 /* align-items: flex-start; */
-gap: 11px;
+gap: 5px;
 margin-left: 34px;
 }
 .videoTitle{
@@ -211,20 +268,21 @@ margin-left: 34px;
 align-self: stretch;
 overflow: hidden;
 color: #FFF;
-text-overflow: ellipsis;
-white-space: nowrap;
+text-overflow:ellipsis;
+/* white-space: nowrap; */
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
+margin: 4px;
 }
 .countBox{
-  height: 50px;
+  /* height: 50px; */
   display: flex;
   flex-direction: row;
 align-self: stretch;
-justify-content: center;
+/* justify-content: center; */
 align-items: center;
 
 }
@@ -241,4 +299,149 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 margin: 4px;
+}
+.earningBox{
+  display: flex;
+padding: 40px 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+border-radius: 16px;
+background: #121212;
+width: auto 386px;
+height: auto 200px ;
+margin-left: 60px;
+}
+.earningInsideBox{
+  display: flex;
+width: 346px;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+}
+.totalEarning{
+  color: #FFF;
+font-family: Inter;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+.earningButton{
+  color: #121212;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.rupee{
+  width: 21.091px;
+height: 32px;
+flex-shrink: 0;
+margin: 0px 6px;
+}
+.earningButton{
+  display: flex;
+height: 48px;
+padding: 18px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 35px;
+background: #FFF;
+}
+.popUpForm{
+  margin: 6px;
+  padding: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #282828; 
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+}
+.mainForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+.contactInput{
+  display: flex;
+  width: 360px;
+  padding: 15px 20px;
+  align-items: flex-start;
+  gap: 10px;
+}
+.contactSubmit{
+  display: flex;
+padding: 12px 40px;
+align-items: center;
+gap: 10px;
+border-radius: 40px;
+background: #FFF;
+box-shadow: 0px 4px 8px 0px rgba(31, 31, 31, 0.10);
+color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.overlayStyles{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.20);
+  z-index: 1000;
+}
+.loading{
+  background-color: #FF2020;
+}
+.cross{
+  width: 20px;
+  position: fixed;
+  top: 8px;
+  right: 10px;
+}
+.submited{
+  display: flex;
+/* width: 480px; */
+height: 396px;
+padding: 40px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #282828;
+}
+.tick{
+  width: 80px;
+height: 80px;
+flex-shrink: 0;
+}
+.requestedCall{
+  color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.requestedCallBottom{
+  color: rgba(255, 255, 255, 0.80);
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
 }
