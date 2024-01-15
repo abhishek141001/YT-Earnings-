@@ -1,6 +1,4 @@
-ChatGPT
 
-Certainly! Below is a concise and clear description that you can use to explain the project on your resume:
 YouTube Earnings Calculator
 
 Description:
