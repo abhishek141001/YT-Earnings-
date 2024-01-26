@@ -12,7 +12,7 @@ function Header(){
             <div className="headerContainer">
             <div className="logoName">
                 <img className="logo" src="/img/logo.png" alt="logo"/>
-                <h2 className="anchorName">anchors</h2><span className="beta"><p className="betaText">beta</p></span>
+                <h2 className="anchorName">YtEarnings</h2><span className="beta"><p className="betaText">beta</p></span>
             </div>
             <div className="popUpButton">
                 <button className="popup" onClick={()=>{setIsOpen(true)}}><img className="phoneImg" src="/img/phone.png" /><p className="requestCall">Request a call back</p></button>
