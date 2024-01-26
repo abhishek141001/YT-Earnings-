@@ -1,3 +1,39 @@
+
+YouTube Earnings Calculator
+
+Description:
+Developed a web application using React that calculates potential earnings for YouTube videos based on a unique algorithm. The application accepts YouTube video share links, fetches data from the YouTube API, and presents users with an estimation of earnings. The algorithm factors in video likes, comments, views, and subscriber count to provide an insightful prediction.
+
+Key Features:
+
+    Accepts YouTube video share links.
+    Fetches video data from the YouTube API, including title, likes, comments, views, and thumbnail.
+    Utilizes a custom algorithm to estimate earnings based on user engagement and subscriber count.
+    Supports saving and displaying previously calculated earnings for other videos.
+
+Technologies Used:
+React, React Router, YouTube API, Email.js, CSS, and more.
+
+Responsibilities:
+
+    Designed and implemented the frontend user interface using React components.
+    Integrated with the YouTube API to retrieve video data dynamically.
+    Implemented a custom algorithm to calculate potential earnings based on video metrics.
+    Enabled user interaction with pop-up forms for requesting a callback.
+
+Outcome:
+The application provides users with insights into the earning potential of YouTube videos, encouraging content creators to assess the financial impact of their content. The use of React and external APIs enhances the project's scalability and interactivity.
+
+Note: This project showcases my proficiency in React, API integration, algorithmic thinking, and user interface design. The combination of frontend development and data processing demonstrates a comprehensive skill set in web development.
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
