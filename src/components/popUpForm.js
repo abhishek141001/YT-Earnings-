@@ -45,7 +45,7 @@ const handleSubmit = (e)=>{
         
         </div>:<form className='mainForm' ref={form} onSubmit={handleSubmit}>
     <input className='contactInput' placeholder='Name' name='user_name' value={name} type='text' onChange={(e)=>{setName(e.target.value)}} />
-   <input className='contactInput' placeholder='Email or Phone number' value={number} name='user_contact' type='text' onChange={(e)=>{setNumber(e.target.value)}}/>
+   <input className='contactInput' placeholder='Email' value={number} name='user_contact' type='email' onChange={(e)=>{setNumber(e.target.value)}}/>
    <button className='contactSubmit'>Request a call back</button>
    </form>} 
     

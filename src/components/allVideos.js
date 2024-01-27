@@ -3,8 +3,9 @@ import React from 'react'
 export default function AllVideos({allVideosArray}) {
   return (
     <>
+    <p className='otherVideo'>Other Videos Potentials</p>
     <div className='otherVideobox'>
-      <p className='otherVideo'>Other Videos Potentials</p>
+     
     <div className='labelBox'>
       <h3 className='listLable'>Title</h3>
       <h3 className='listLable'>Thumbnail</h3>

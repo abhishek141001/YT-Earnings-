@@ -128,7 +128,7 @@ export default function Page2() {
 
         }
         getChannelData();
-        const newTotalEarning = Math.min(parseInt(subscriber), parseInt(viewCount)) + 10 * parseInt(videoCommentCount) + 5 * parseInt(videoLike);
+        const newTotalEarning = Math.round(parseInt(viewCount)) *0.004;
     setTotalEarning(newTotalEarning);
     setProgress(100)
 
@@ -160,7 +160,7 @@ export default function Page2() {
                 
                     <div className="thumbnailFull">
                    
-                    <img className="back" src="/img/arrow.png" onClick={handleBack}/>
+                 
                         <div className="thumbnailTop">
                             <img className="thumbnailTopImg" src="/img/thumbnailtop.png" alt="img" />
                             <p className="thumbnailTopText">Top earner video</p>
@@ -186,8 +186,9 @@ export default function Page2() {
                     </div>
                     <div className="earningBox">
                         <div className="earningInsideBox">
-                            <p className="totalEarning"><img className="rupee" src="/img/rupee.png" />{totalEarning}</p>
-                            <button className="earningButton">Check out</button>
+                        <p className="estimatedEarnings">Estimated earnings</p>
+                            <p className="totalEarning">$ {totalEarning}</p>
+                            <button className="earningButton" onClick={handleBack}>Check out</button>
                         </div>
 
                     </div>

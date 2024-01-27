@@ -218,8 +218,8 @@ font-weight: 400;
 line-height: 20px; /* 125% */
 }
 .thumbnailImg{
-  width: 240px;
-height: 135px;
+width: 240px;
+height: 140px;
 border-radius: 10px;
 background:  lightgray 50% / cover no-repeat, #FFF;
 }
@@ -501,7 +501,7 @@ font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: 28px; /* 140% */
-margin-left: 35%;
+margin-left: 24%;
 }
 .otherVideobox{
   display: flex;
@@ -516,4 +516,106 @@ margin-left: 35%;
   background: rgba(30, 30, 30, 0.50);
   margin-top: 5px;
   max-width: 1190px;
+}
+.estimatedEarnings{
+  color: white;
+  font-size: larger;
+}
+@media only screen and (max-width: 600px) {
+.App{
+  width: auto;
+  margin: auto;
+}
+.headerContainer{
+  justify-content: normal;
+}
+.popUpButton{
+  margin-left: 30px;
+}
+.anchorName{
+  font-size: 24px;
+  margin-left: 10px;
+}
+.page1{
+  margin: 0;
+}
+.containerBox1{
+  width: auto;
+}
+.headingLine{
+  font-size: 25px;
+}
+.searchBox{
+  padding: 9px 12px;
+}
+.inputLink{
+  font-size: unset;
+}
+.linkButton{
+  padding: 6px 4px;
+  height: unset;
+}
+.popup{
+  padding: 1px 5px;
+  gap: unset;
+}
+.page2{
+  justify-content: center;
+  margin-top: 26px;
+}
+.container2{
+  flex-direction: column;
+  width: unset;
+  padding: 13px;
+}
+.thumbnailFull{
+  align-items: flex-start;
+}
+.thumbnailTop{
+  padding: 0px 2px;
+  gap: unset;
+}
+.thumbnailTopImg {
+  width: 20px;
+  height: 20px;
+}
+.thumbnailTopText{
+  font-size: 12px;
+}
+.nameCount{
+  justify-content: unset;
+  width: unset;
+}
+.earningInsideBox{
+  gap: unset;
+  width: 297px;
+}
+.totalEarning{
+  font-size: 23px;
+}
+.labelBox{
+  padding: 7px 0px;
+  max-width: unset;
+}
+.earningBox{
+  margin-left: unset;
+}
+.listLable {
+  margin: 0px 8px;
+  width: unset;
+  font-size: small;
+}
+.videoBox{max-width: unset;}
+.videoList{
+max-width: unset;
+}
+.listLike{
+  font-size: small;
+  margin: unset;
+  margin-right: 5px;
+}
+.requestCall{
+  font-size: 12px;
+}
+
 }
