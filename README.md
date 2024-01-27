@@ -1,3 +1,4 @@
+https://ytvideoearning.netlify.app
 
 YouTube Earnings Calculator
 
